@@ -1,0 +1,1 @@
+* * * * * python /app/refresh_dyndns.py -u user -k key -d domaine >> /dev/stdout 2>&1
