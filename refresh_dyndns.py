@@ -13,6 +13,7 @@ if __name__ == "__main__":
     userId, apiKey, domain = parseArguments()
     refreshUrl = f'https://api.org-dns.com/dyndns/?user={userId}&key={apiKey}&domain={domain}'
     print(f'Attempting to refresh dns record by fetching: {refreshUrl}')
+    
     response = str(urllib.request.urlopen(refreshUrl).read())
     if 'not updated' in response:
         print('[SUCCESS] Dns record already up to date.')
